@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Open Sans:400,600,800');
+.avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.img-fluid {
+    object-fit: cover;
+}
+
+.product-card-text {
+    font-family: "Open Sans";
+    margin: 0px;
+}
+
+.product-card-4 {
+    min-width: 200px;
+    max-width: 300px;
+    height: 375px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.product-card-4 img {
+    transition: all 0.25s linear;
+}
+
+.product-card-4 .product-content {
+    position: relative;
+    padding: 15px;
+    padding-bottom: 0;
+    background-color: #FFF;
+}
+
+.product-card-4 .product-name {
+    background-color: rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: -70px;
+    color: #FFF;
+    text-overflow: ellipsis;
+    font-size: 17px;
+    z-index: 3;
+}
+
+.product-card-4 .product-name p {
+    font-weight: 600;
+    font-size: 13px;
+    color: #FFF;
+    text-overflow: ellipsis;
+    letter-spacing: 1.5px;
+}
+
+.product-card-4 .product-description {
+    color: #777;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+    padding: 10px;
+    height: 65px;
+}
+
+.product-card-4 .product-overview {
+    padding: 0px 0px;
+    text-overflow: ellipsis;
+}
+
+.product-card-4 .product-overview p {
+    font-size: 10px;
+    font-weight: 600;
+    margin: 0;
+    color: #777;
+    text-overflow: ellipsis;
+}
+
+.product-card-4 .product-overview h4 {
+    color: #273751;
+    font-weight: bold;
+    text-overflow: ellipsis;
+}
+
+.product-card-4 .product-content::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    top: -10px;
+    left: 0px;
+    right: 0px;
+    background-color: #FFF;
+    z-index: 5;
+    transform: skewY(3deg);
+}
+
+.product-card-4:hover #productImage {
+    transform: rotate(5deg) scale(1.1, 1.1);
+    filter: brightness(110%);
+}
+
+#productImage {
+    width: 100%;
+    height: 45%;
+    object-fit: cover;
+}
+
+.card-custom-avatar img {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    z-index: 10;
+    position: absolute;
+    top: -30px;
+    right: 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.all-categories-active {
+    background-color: greenyellow;
+    color: white;
+}
+
+.product-overview-p {
+    padding: 0;
+    width: 33%;
+}
+
+.buyingBoxes {
+    font-size: 12px;
+    width: 110%;
+    position: absolute;
+    bottom: 0;
+    flex-wrap: nowrap;
+}
+
+.buyingBoxes div {
+    margin-top: 15px;
+    padding: 10px 0 10px 0;
+    background-color: rgba(17, 255, 89, 0.15);
+}
+
+.product-overview-p div sub {
+    color: gray;
+}
+
+#buyBox:hover {
+    background-color: greenyellow;
+}
+
+#buyBoxDisabled {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+#addToCardBox:hover {
+    background-color: greenyellow;
+}
+
+#addToCardBoxDisabled {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+#buyBox:hover a {
+    color: black;
+}
+
+#buyBoxDisabled:hover a {
+    cursor: not-allowed;
+    color: gray;
+}
+
+#addToCardBox:hover a {
+    color: black;
+}
+
+#addToCardBoxDisabled:hover a {
+    cursor: not-allowed;
+    color: gray;
+}
+
+.buyingBoxesDisabled {
+    cursor: not-allowed;
+}
+
+.custom_quantity {
+    width: fit-content;
+    border-radius: 0;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    background-color: gainsboro;
+}
+
+.custom_quantity_btn {
+    font-weight: bold;
+    color: black;
+    font-size: x-large;
+    padding: 0px 25px 0px 25px;
+    display: inline;
+    vertical-align: middle;
+}

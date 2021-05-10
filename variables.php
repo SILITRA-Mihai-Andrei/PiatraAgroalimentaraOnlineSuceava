@@ -14,13 +14,18 @@ $password = "";
 $dbname = "web_app_database";
 $database_error_connection_redirect_page = '/database_error.html';
 
-$test_page = '/tests.php';
+$test_page = '/tests';
+$portal_page_server = '/portal';
 $portal_page = "portal.html";
 $login_page_server = '/login.php';
 $login_page = 'login.html';
-$register_page_server = '/register.php';
+$register_page_server = '/register';
 $register_page = 'register.html';
-$market_page_server = '/market.php';
+$market_page = 'market.html';
+$market_page_server = '/market';
+$cumparaturi_page_server = '/cumparaturi';
+$catch_page = 'catch.html';
+$shoping_cart_page_server = '/shoping-cart';
 
 // Initiate the database connection
 $db = new PDO("mysql:host=$servername; dbname=$dbname; charset=utf8", $username, $password);
@@ -31,3 +36,5 @@ $db = new PDO("mysql:host=$servername; dbname=$dbname; charset=utf8", $username,
 $invalid_field_array_of_attributes = array('class'=>'alert alert-danger p-1 mt-1', 
                                             'id'=>'NumeCompletAlertInvalid',
                                             'style'=>'font-size: 12px;');
+
+

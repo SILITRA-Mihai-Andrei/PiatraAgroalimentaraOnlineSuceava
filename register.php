@@ -4,17 +4,21 @@ require_once ("variables.php");
 require_once ("strings.php");
 require_once ("utils.php");
 
-// Get the objects used to parse the HTML page and modify it
-[$dom, $html_content_xpath] = getHTMLXPATH($register_page);
+try{
+    // Get the objects used to parse the HTML page and modify it
+    [$dom, $html_content_xpath] = getHTMLXPATH($register_page);
 
-// First entry
-if(!isset($_GET[STR_GET_REGISTER_BTN])){
-    // Upload the HTML page - no action needed in the first entry
-    echo $dom->saveHTML();
-}
-// Second entry, after the user completed the fields and pressed the register button
-else{
-    checkFields($db);
+    // First entry
+    if(!isset($_GET[STR_GET_REGISTER_BTN])){
+        // Upload the HTML page - no action needed in the first entry
+        echo $dom->saveHTML();
+    }
+    // Second entry, after the user completed the fields and pressed the register button
+    else{
+        checkFields($db);
+    }
+} catch(Exception $e){
+    header( "Location: $catch_page");
 }
 
 function checkFields($db){
@@ -90,6 +94,7 @@ function registerUserToDataBase($db, $user, $email, $name, $mobile, $locality, $
         $idCheck = $db->query( "SELECT ".STR_ID_DB." FROM users WHERE "."user"."='{$user}'");
         $idCheck = $idCheck->fetchColumn();            
         if(is_numeric($idCheck)){
+            $db->query( "INSERT INTO avatars(id) VALUES ({$idCheck})");
             header( "Location: $login_page_server");
         }
         else{
